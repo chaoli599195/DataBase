@@ -1,0 +1,110 @@
+DECLARE
+   order_id_inserted orders.orderid%TYPE;
+   staff_id_inserted staff.staffid%TYPE;
+   dept_id_inserted department.deptid%TYPE;
+BEGIN
+ --Install sample customers data
+ DELETE from customers;
+Insert_Customer(392821942, 'M', '23-march-74', 'Bob', 2011235321, 'bob@ncsu.edu', '101 Russet St.', 4398873298761234);
+Insert_Customer(292818782, 'F', '19-September-80', 'Susie', 1023946492, 'susie@ncsu.edu', '102 Golden Lane', 6398873298761234);
+Insert_Customer(122021342, 'M', '12-November-64', 'Bill', 9084832853, 'bill@ncsu.edu', '103 Sweet Ct.', 6398873298761235);
+Insert_Customer(735821232, 'M', '11-December-55', 'Beavis', 1669832837, 'beavis@ncsu.edu', '104 Mashed Road.', 3298873298761235);
+
+ 
+ --add departments
+  DELETE FROM Department;
+  INSERT into Department(NAME) values('Management');
+  INSERT into Department(NAME) values('Sales');
+  INSERT into Department(NAME) values('Legal');
+	INSERT into Department(NAME) values('Accountancy');
+  
+  DELETE from Store;
+      INSERT INTO store ( name, address, phone_number) VALUES( 'Books-a-Thousand-1', '3322 ivy commons dr. raleigh', 9199618601);
+      INSERT INTO store ( name, address, phone_number) VALUES( 'Books-a-Thousand-2', '3200 gorman st. raleigh', 9199618602);
+  
+--add staff members
+  DELETE from Staff;
+  
+  -- Adding CEO data
+  INSERT into staff ( ssn, name, job_title, gender, dob, address, phone_number, salary) VALUES (392821332,'CEO','CEO','M','23-July-57','3521 ivy commons',9199008900,100000);  
+  insert into member_of(staffid, deptid) VALUES(1, 1);   
+  insert into works_in(staffid, storeid) values(1, 1);
+  insert into managedby values(1, 1);
+  -- Done adding CEO data
+  
+  Insert_Staff(392821901,'Eddie Murphy' , 'M-Unit-01', 'M', '12-august-61', '132 Red Street', 4303240943, 43000, 'Management', 1, 1); --*ceo_id
+  Insert_Staff(292818702,'Tiny Fey' , 'M-Unit-02','F', '12-may-74', '111 Rose Dr.', 3241928765, 40000, 'Management', 1, 1); --*ceo_id
+  Insert_Staff(122021303,'George Carlin' , 'S-Unit-01', 'M', '12-may-37', '54 Purple road', 1294303784, 30000, 'Sales', 1, 2);
+  Insert_Staff(735821204,'Eddie Izzard', 'M-Unit-01','M', '24-february-48', '98 Jester Ct.', 7743983421, 42000, 'Management', 2, 1); --*ceo_id
+  Insert_Staff(392821905,'Richard Pryor' ,'S-Unit-01', 'M','06-December-43', '34 Pinewood st.', 1023943243, 29000, 'Sales', 2, 5);
+  Insert_Staff(735821206,'Sam Kinison' , 'S-Unit-02','M', '21-march-53', '13 Oakland lane', 8883215843, 25000, 'Sales', 2, 5);
+
+
+
+
+    
+DELETE from Vendors;
+Insert_vendors('Turners, Inc.',  '34 Page St.', 5054351029,  '10-January-12', '1-June-12', 12345);
+Insert_vendors('Print and Go',  '432 Letter Lane', 2344329485, '20-march-12','20-september-12', 54321);
+
+
+DELETE from MERCHANDISE;
+DELETE from merchandisestock;
+
+Insert_Merchandise('Computer Networking', 1234,'Robert Hooke', 725.00, 1);
+Insert_Merchandise('Operating System Concepts', 1235,'Joe Bob', 650.00, 2);
+Insert_Merchandise('Database Design', 1236,'Arthur Fry', 700.00, 2);
+Insert_Merchandise('Takingoverworldfordummies', 1237,'Bill Gates', 5.00, 1);
+Insert_MerchandiseStock(1, 1, 7); --*
+Insert_MerchandiseStock(2, 1, 10); --*
+Insert_MerchandiseStock(3, 1, 6);
+Insert_MerchandiseStock(4, 2, 6);
+
+
+--add custore orders
+DELETE from orders;
+
+insert_order(order_id_inserted);
+insert_order(order_id_inserted);
+insert_order(order_id_inserted);
+insert_order(order_id_inserted);
+
+--dbms_output.putline('table' || order_id_inserted);
+
+
+
+
+DELETE from orderdetails;
+insert_orderdetails(1,1,'fulfilled',3);
+insert_orderdetails(2,2,'fulfilled',2);
+insert_orderdetails(3,4,'fulfilled',1);
+insert_orderdetails(4,4,'fulfilled',2);
+
+
+DELETE from place_order;
+
+-- insert_place_order(1,1,4);
+-- insert_place_order(2,2,4);
+-- insert_place_order(3,4,5);
+-- insert_place_order(4,3,6);
+
+delete from customerbilling_account;
+insert_customerbilling_account(3, 1, 1,  725*3);
+insert_customerbilling_account(3, 2, 2, 650*2);
+insert_customerbilling_account(5, 4, 3, 5*1);
+insert_customerbilling_account(6, 3, 4, 5*2);
+
+
+DELETE from  vendorpurchases;
+insert_vendorpurchases(1, 1, 10);
+insert_vendorpurchases(2, 4, 12);
+insert_vendorpurchases(2, 2, 6);
+insert_vendorpurchases(1, 2, 9);
+
+commit;
+end;
+/
+
+ -- select sum(customerbilling_account.amount) from customerbilling_account, maintainedforcustomer 
+ --      where customerbilling_account.customerbillingid=maintainedforcustomer.customerbillingid and trunc(customerbilling_account.due_date)='31-dec-2012' and maintainedforcustomer.customerid=1 and customerbilling_account.date_paid IS NULL  ;
+ 

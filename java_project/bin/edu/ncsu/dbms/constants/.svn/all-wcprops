@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/csc-540-project-term-dbamateurs/!svn/ver/31/BookStore_Management/src/edu/ncsu/dbms/constants
+END
+DBMSFieldsEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/csc-540-project-term-dbamateurs/!svn/ver/22/BookStore_Management/src/edu/ncsu/dbms/constants/DBMSFieldsEnum.java
+END
+DBMSConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/csc-540-project-term-dbamateurs/!svn/ver/31/BookStore_Management/src/edu/ncsu/dbms/constants/DBMSConstants.java
+END
+DBMSLoggingLevelsEnum.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/csc-540-project-term-dbamateurs/!svn/ver/8/BookStore_Management/src/edu/ncsu/dbms/constants/DBMSLoggingLevelsEnum.java
+END

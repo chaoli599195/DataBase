@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/svn/csc-540-project-term-dbamateurs/!svn/ver/43/sql_files
+END
+ordersProc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/csc-540-project-term-dbamateurs/!svn/ver/43/sql_files/ordersProc.sql
+END
+storesProc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/csc-540-project-term-dbamateurs/!svn/ver/10/sql_files/storesProc.sql
+END
+customerProc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/csc-540-project-term-dbamateurs/!svn/ver/13/sql_files/customerProc.sql
+END
+staffProc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/csc-540-project-term-dbamateurs/!svn/ver/18/sql_files/staffProc.sql
+END
+vendorPurchases.sql
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/csc-540-project-term-dbamateurs/!svn/ver/34/sql_files/vendorPurchases.sql
+END
+Delete_tables.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/csc-540-project-term-dbamateurs/!svn/ver/41/sql_files/Delete_tables.sql
+END
+Create_tables.sql
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/csc-540-project-term-dbamateurs/!svn/ver/18/sql_files/Create_tables.sql
+END
+reports.sql
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/csc-540-project-term-dbamateurs/!svn/ver/41/sql_files/reports.sql
+END
+Procedure_for_Merchandise.sql
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/csc-540-project-term-dbamateurs/!svn/ver/4/sql_files/Procedure_for_Merchandise.sql
+END
+datainstall.sql
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/csc-540-project-term-dbamateurs/!svn/ver/47/sql_files/datainstall.sql
+END
+deptProc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/csc-540-project-term-dbamateurs/!svn/ver/10/sql_files/deptProc.sql
+END
